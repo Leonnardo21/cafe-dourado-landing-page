@@ -1,0 +1,487 @@
+:root {
+  --color-marrom-escuro: #3e2a23; /* Fundo principal, header, botões */
+  --color-dourado: #f4c300; /* Destaques, ícones, hovers */
+  --color-marrom-claro: #8c5e3c; /* Seções secundárias, cards */
+  --color-bege-cafe: #d6b693; /* Fundos suaves, seções claras */
+  --color-vermelho-detalhe: #c12c2c; /* Detalhes, chamadas para ação */
+  --color-branco-suave: #f9f7f4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Inicio Header */
+header {
+  width: 100%;
+  height: 80px;
+  background-color: var(--color-marrom-escuro);
+  position: fixed;
+  z-index: 9;
+}
+
+header img {
+  width: 72px;
+  height: 72px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#nav-links {
+  display: flex;
+  list-style: none;
+}
+
+#nav-links li {
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+#nav-links li a {
+  text-decoration: none;
+  color: var(--color-branco-suave);
+  transition: color 0.3s ease;
+}
+
+#nav-links li a:hover {
+  color: var(--color-dourado);
+}
+/* Fim Header */
+
+/* Inicio Hero */
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: url("./assets/background-2.jpg");
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+#hero .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-left: 150px;
+  max-width: 450px;
+  text-align: center;
+  color: var(--color-branco-suave);
+}
+
+.hero-content h1,
+.hero-content span {
+  font-size: 3.2rem;
+}
+
+.hero-content span {
+  font-weight: bold;
+  color: var(--color-dourado);
+}
+/* Fim Hero */
+
+/* Início About */
+#about {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-bege-cafe);
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 20px;
+}
+
+.about-container img {
+  width: 100%;
+  max-width: 512px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-content {
+  max-width: 600px;
+  color: var(--color-marrom-escuro);
+  font-size: 28px;
+}
+
+.about-content h2 {
+  font-size: 36px;
+  color: var(--color-branco-suave);
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-style: italic;
+}
+/* Fim About */
+
+/* Inicio Location */
+#location {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--color-marrom-claro);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 30px 20px;
+}
+
+#location h2 {
+  color: var(--color-branco-suave);
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.location-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.location-content iframe {
+  border-radius: 8px;
+  width: 750px;
+  height: 600px;
+  border: 0;
+}
+
+.location-info {
+  font-size: 32px;
+  text-align: center;
+  color: var(--color-branco-suave);
+  font-style: italic;
+  line-height: 1.6;
+}
+/* Fim Location */
+
+/* Inicio Depoiments */
+#depoiments {
+  background-color: var(--color-dourado);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#depoiments h2 {
+  font-size: 32px;
+  color: var(--color-branco-suave);
+  margin-bottom: 40px;
+}
+
+.depoiments-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.depoiments-card {
+  background-color: var(--color-branco-suave);
+  width: 200px;
+  padding: 40px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.depoiments-image {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.depoiments-card h3 {
+  margin: 10px 0 5px;
+  font-size: 16px;
+  color: var(--color-dourado);
+}
+
+.depoiments-card p {
+  font-size: 12px;
+  color: var(--color-marrom-claro);
+  font-style: italic;
+}
+/* Fim Depoiments */
+
+/* Inicio Contact */
+#contact {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-bege-cafe);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.contact-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.contact-container form h3 {
+  font-size: 28px;
+  color: var(--color-branco-suave);
+  margin-bottom: 20px;
+}
+
+.contact-card {
+  background-color: var(--color-marrom-escuro);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.contact-card textarea {
+  min-height: 150px;
+  resize: none;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+  background-color: var(--color-marrom-claro);
+  color: var(--color-branco-suave);
+  padding: 10px 30px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--color-dourado);
+}
+
+.contact-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.contact-image img {
+  max-width: 100%;
+  height: auto;
+}
+/* Fim Contact */
+footer {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-marrom-escuro);
+}
+
+footer p {
+  color: var(--color-branco-suave);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .hero-content {
+    margin-left: 60px;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .about-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .about-content {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .about-content h2 {
+    font-size: 30px;
+  }
+
+  .location-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .location-content iframe {
+    width: 90%;
+    height: 400px;
+  }
+
+  .location-info {
+    font-size: 24px;
+    padding: 0 20px;
+  }
+
+  .depoiments-container {
+    gap: 30px;
+  }
+
+  .depoiments-card {
+    width: 90%;
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-marrom-escuro);
+    flex-direction: column;
+    align-items: center;
+    display: none; /* Oculta por padrão */
+  }
+
+  #nav-links.show {
+    display: flex; /* Mostra quando ativado */
+  }
+
+  #nav-links li {
+    margin: 15px 0;
+  }
+
+  #menu-toggle {
+    display: block;
+    font-size: 28px;
+    color: var(--color-branco-suave);
+    cursor: pointer;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  .hero-content h1,
+  .hero-content span {
+    font-size: 2.2rem;
+  }
+
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-image {
+    order: -1;
+  }
+
+  form h3 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 769px) {
+  #menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1,
+  .hero-content span {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    font-size: 18px;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .location-info {
+    font-size: 18px;
+  }
+
+  #depoiments h2 {
+    font-size: 24px;
+  }
+
+  .depoiments-card p {
+    font-size: 11px;
+  }
+
+  .depoiments-card h3 {
+    font-size: 14px;
+  }
+}
