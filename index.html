@@ -13,149 +13,218 @@
     <title>Café Dourado</title>
   </head>
   <body>
-    <!-- Início Header -->
+    <!-- Header -->
     <header>
-      <nav id="navbar">
-        <img src="./assets/Logo.png" alt="Logo da cafeteria Café Dourado" />
-        <div id="menu-toggle">&#9776;</div>
-        <ul id="nav-links">
+      <nav class="navbar">
+        <a href="#home" class="logo">Café Dourado</a>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
           <li><a href="#about">Sobre</a></li>
           <li><a href="#location">Localização</a></li>
-          <li><a href="#depoiments">Depoimentos</a></li>
+          <li><a href="#testimonials">Depoimentos</a></li>
           <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
     </header>
-    <!-- Fim Header -->
-    <!-- Início Hero -->
-    <section id="hero" class="hero-section">
-      <div class="overlay">
-        <div class="hero-content">
-          <h1>Onde cada gole é um momento</h1>
-          <span class="dourado">Dourado</span>
-        </div>
-      </div>
-    </section>
-    <!-- Fim Hero -->
-    <!-- Início About -->
-    <section id="about">
-      <div class="about-container">
-        <div class="about-content">
-          <h2>Sobre o Café Dourado</h2>
-          <p>
-            No Café Dourado, cada xícara conta uma história. Localizada no
-            coração da cidade, nossa cafeteria nasceu da paixão por café de
-            qualidade e momentos bem vividos. Com um ambiente aconchegante e uma
-            decoração que mistura o rústico com o moderno, oferecemos a
-            combinação perfeita entre sabor, aroma e acolhimento.
-          </p>
-        </div>
-        <img
-          src="./assets/cafeteria-cafe-dourado.jpeg"
-          alt="Foto da cafeteria Café Dourado"
-        />
-      </div>
-    </section>
-    <!-- Fim About -->
-    <!-- Início Location -->
-    <section id="location">
-      <h2>Localização</h2>
-      <div class="location-content">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127394.47751651339!2d-38.60201776770214!3d-3.79331068839782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c3f464c783f%3A0x4661c60a0c6b37ca!2sFortaleza%20-%20CE!5e0!3m2!1spt-BR!2sbr!4v1748436523323!5m2!1spt-BR!2sbr"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
-        <address class="location-info">
-          <p>Av. Fortal City, 123</p>
-          <p>Aldeota</p>
-          <p>Fortaleza - CE</p>
-        </address>
-      </div>
-    </section>
-    <!-- Fim Location -->
-    <!-- Inicio Depoiments -->
-    <section id="depoiments">
-      <h2>Depoimentos</h2>
-      <div class="depoiments-container">
-        <div class="depoiments-card">
-          <img
-            class="depoiments-image"
-            src="https://images.icon-icons.com/1879/PNG/512/iconfinder-11-avatar-2754576_120520.png"
-          />
-          <h3>Maria Santos</h3>
-          <p>
-            “O Café Dourado é o meu lugar preferido para relaxar. O ambiente é
-            acolhedor e o café, simplesmente perfeito!”
-          </p>
-        </div>
-        <div class="depoiments-card">
-          <img
-            class="depoiments-image"
-            src="https://images.icon-icons.com/1736/PNG/512/4043253-friday-halloween-jason-movie_113258.png"
-          />
-          <h3>Jason</h3>
-          <p>
-            “Atendimento impecável e qualidade incomparável. Recomendo para
-            todos os amantes de café!”
-          </p>
-        </div>
-        <div class="depoiments-card">
-          <img
-            class="depoiments-image"
-            src="https://images.icon-icons.com/1879/PNG/512/iconfinder-4-avatar-2754580_120522.png"
-          />
-          <h3>Carla Lima</h3>
-          <p>
-            “Os doces são maravilhosos e o capuccino é o melhor da cidade.
-            Sempre volto com prazer!”
-          </p>
-        </div>
-        <div class="depoiments-card">
-          <img
-            class="depoiments-image"
-            src="https://images.icon-icons.com/1736/PNG/512/4043232-avatar-batman-comics-hero_113278.png"
-          />
-          <h3>Bruce Wayne</h3>
-          <p>
-            “Excelente custo-benefício e um clima que faz a gente querer passar
-            horas por lá. Sensacional!”
-          </p>
-        </div>
-        <div class="depoiments-card">
-          <img
-            class="depoiments-image"
-            src="https://images.icon-icons.com/1736/PNG/512/4043269-avatar-male-president-trump_113267.png"
-          />
-          <h3>Sr. Trump</h3>
-          <p>Ambiente super aconchegante e o café é maravilhoso!</p>
-        </div>
-      </div>
-    </section>
-    <!-- Fim Depoiments -->
-    <!-- Início Contact -->
-    <section id="contact">
-      <div class="contact-container">
-        <form>
-          <h3>Entre em contato</h3>
-          <div class="contact-card">
-            <input type="text" placeholder="Nome" />
-            <input type="email" placeholder="Email" />
-            <textarea placeholder="Mensagem"></textarea>
-          </div>
-          <button type="submit">Enviar</button>
-        </form>
 
-        <div class="contact-image">
-          <img src="./assets/contact-us.png" alt="Entre em contato conosco" />
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="floating-element">☕</div>
+      <div class="floating-element">✨</div>
+      <div class="floating-element">🌟</div>
+
+      <div class="hero-content">
+        <h1>Onde cada gole é um momento</h1>
+        <div class="hero-subtitle">Dourado</div>
+        <a href="#about" class="cta-button">Descubra Nossa História</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>Sobre o Café Dourado</h2>
+            <p>
+              No Café Dourado, cada xícara conta uma história. Localizada no
+              coração da cidade, nossa cafeteria nasceu da paixão por café de
+              qualidade e momentos bem vividos. Com um ambiente aconchegante e
+              uma decoração que mistura o rústico com o moderno, oferecemos a
+              combinação perfeita entre sabor, aroma e acolhimento.
+            </p>
+            <p>
+              Nossos grãos são selecionados criteriosamente, vindos das melhores
+              fazendas do Brasil. Cada xícara é preparada com carinho e técnica,
+              garantindo uma experiência única para nossos clientes.
+            </p>
+          </div>
+          <div class="about-image">
+            <div
+              style="
+                width: 100%;
+                height: 400px;
+                background: var(--gradient-coffee);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                color: white;
+              "
+            >
+              ☕
+            </div>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat-item">
+            <span class="stat-number">1000+</span>
+            <span class="stat-label">Clientes Satisfeitos</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Variedades de Café</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Anos de Experiência</span>
+          </div>
         </div>
       </div>
     </section>
-    <!-- Fim Contact -->
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+      <div class="container">
+        <h2>Localização</h2>
+        <div class="location-content">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127394.47751651339!2d-38.60201776770214!3d-3.79331068839782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c3f464c783f%3A0x4661c60a0c6b37ca!2sFortaleza%20-%20CE!5e0!3m2!1spt-BR!2sbr!4v1748436523323!5m2!1spt-BR!2sbr"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+          </div>
+          <div class="location-info">
+            <h3>Venha nos visitar</h3>
+            <p><strong>Endereço:</strong></p>
+            <p>Av. Fortal City, 123</p>
+            <p>Aldeota, Fortaleza - CE</p>
+            <br />
+            <p><strong>Horário de Funcionamento:</strong></p>
+            <p>Segunda a Sexta: 7h às 22h</p>
+            <p>Sábado e Domingo: 8h às 23h</p>
+            <br />
+            <p><strong>Telefone:</strong></p>
+            <p>(85) 3000-0000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2>Depoimentos</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">M</div>
+            <div class="testimonial-name">Maria Santos</div>
+            <div class="testimonial-text">
+              "O Café Dourado é o meu lugar preferido para relaxar. O ambiente é
+              acolhedor e o café, simplesmente perfeito!"
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">J</div>
+            <div class="testimonial-name">João Silva</div>
+            <div class="testimonial-text">
+              "Atendimento impecável e qualidade incomparável. Recomendo para
+              todos os amantes de café!"
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">C</div>
+            <div class="testimonial-name">Carla Lima</div>
+            <div class="testimonial-text">
+              "Os doces são maravilhosos e o capuccino é o melhor da cidade.
+              Sempre volto com prazer!"
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">R</div>
+            <div class="testimonial-name">Roberto Costa</div>
+            <div class="testimonial-text">
+              "Excelente custo-benefício e um clima que faz a gente querer
+              passar horas por lá. Sensacional!"
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-avatar">A</div>
+            <div class="testimonial-name">Ana Ferreira</div>
+            <div class="testimonial-text">
+              "Ambiente super aconchegante e o café é maravilhoso! Meu local
+              favorito para trabalhar."
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Entre em Contato</h2>
+        <div class="contact-content">
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" placeholder="Seu Nome" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Seu Email" required />
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Sua Mensagem" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Enviar Mensagem</button>
+            </form>
+          </div>
+          <div class="contact-info">
+            <h3>Informações de Contato</h3>
+            <div class="contact-item">
+              <strong>📍 Endereço</strong><br />
+              Av. Fortal City, 123<br />
+              Aldeota, Fortaleza - CE
+            </div>
+            <div class="contact-item">
+              <strong>📞 Telefone</strong><br />
+              (85) 3000-0000
+            </div>
+            <div class="contact-item">
+              <strong>📧 Email</strong><br />
+              contato@cafedourado.com.br
+            </div>
+            <div class="contact-item">
+              <strong>🕒 Horário</strong><br />
+              Seg-Sex: 7h às 22h<br />
+              Sáb-Dom: 8h às 23h
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-      <p>Desenvolvido por Leonardo de Souza Rodrigues</p>
+      <div class="container">
+        <p>&copy; 2025 Café Dourado. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Leonardo de Souza Rodrigues</p>
+      </div>
     </footer>
     <script src="./scripts.js"></script>
   </body>
