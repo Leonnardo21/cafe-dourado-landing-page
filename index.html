@@ -3,23 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Café Dourado</title>
+    <link rel="stylesheet" href="style.css?v=2" />
+    <title>Café Dourado - Momentos Especiais</title>
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
   </head>
   <body>
-    <!-- Header -->
-    <header>
+    <!-- Header/Navbar -->
+    <header id="header">
       <nav class="navbar">
-        <a href="#home" class="logo">Café Dourado</a>
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <a href="#home" class="logo">
+          <!-- Coffee Icon SVG -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+            <path d="M6 1v3"/>
+            <path d="M10 1v3"/>
+            <path d="M14 1v3"/>
+          </svg>
+          Café Dourado
+        </a>
+        <div class="menu-toggle" id="menuToggle" onclick="toggleMenu()">
+          <i data-lucide="menu"></i>
+        </div>
         <ul class="nav-links" id="navLinks">
           <li><a href="#about">Sobre</a></li>
+          <li><a href="#menu">Especialidades</a></li>
           <li><a href="#location">Localização</a></li>
           <li><a href="#testimonials">Depoimentos</a></li>
           <li><a href="#contact">Contato</a></li>
@@ -34,62 +43,179 @@
       <div class="floating-element">🌟</div>
 
       <div class="hero-content">
-        <h1>Onde cada gole é um momento</h1>
-        <div class="hero-subtitle">Dourado</div>
-        <a href="#about" class="cta-button">Descubra Nossa História</a>
+        <h1>Onde cada gole é um momento único</h1>
+        <div class="hero-subtitle">Descubra a arte do café especial no coração de Fortaleza. Grãos selecionados, torra artesanal e um ambiente feito para você relaxar.</div>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-primary">Ver Cardápio <i data-lucide="arrow-right"></i></a>
+          <a href="#about" class="btn btn-secondary">Nossa História</a>
+        </div>
       </div>
+
+      <a href="#about" class="scroll-indicator">
+        <span>Role para Explorar</span>
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </a>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
         <div class="about-content">
-          <div class="about-text">
-            <h2>Sobre o Café Dourado</h2>
-            <p>
-              No Café Dourado, cada xícara conta uma história. Localizada no
-              coração da cidade, nossa cafeteria nasceu da paixão por café de
-              qualidade e momentos bem vividos. Com um ambiente aconchegante e
-              uma decoração que mistura o rústico com o moderno, oferecemos a
-              combinação perfeita entre sabor, aroma e acolhimento.
+          <div class="about-text reveal">
+            <span class="section-tagline">Nossa Essência</span>
+            <h2>O Café Dourado</h2>
+            <p class="about-highlight">
+              "Acreditamos que café não é apenas uma bebida, mas um ritual que conecta pessoas e desperta sentimentos."
             </p>
             <p>
-              Nossos grãos são selecionados criteriosamente, vindos das melhores
-              fazendas do Brasil. Cada xícara é preparada com carinho e técnica,
-              garantindo uma experiência única para nossos clientes.
+              Localizado no coração da Aldeota, nossa cafeteria nasceu da paixão por cafés de alta qualidade e momentos bem vividos. Com um ambiente acolhedor projetado meticulosamente, misturamos a elegância do rústico com toques modernos de dourado e design sofisticado.
+            </p>
+            <p>
+              Nossos grãos são cultivados de forma sustentável nas melhores fazendas do país, passando por processos de seleção rigorosos e torrefação artesanal. Cada método de extração é executado com precisão científica para extrair notas e aromas excepcionais na sua xícara.
             </p>
           </div>
-          <div class="about-image">
-            <div
-              style="
-                width: 100%;
-                height: 400px;
-                background: var(--gradient-coffee);
-                border-radius: 20px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 4rem;
-                color: white;
-              "
-            >
-              ☕
+          <div class="about-image reveal">
+            <div class="image-frame">
+              <img src="./assets/cafeteria-cafe-dourado.jpeg" alt="Ambiente do Café Dourado" />
+              <div class="about-badge">
+                <span class="badge-year">5+</span>
+                <span class="badge-text">Anos de Paixão</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="stats">
-          <div class="stat-item">
+        <div class="stats reveal">
+          <div class="stat-card">
             <span class="stat-number">1000+</span>
             <span class="stat-label">Clientes Satisfeitos</span>
           </div>
-          <div class="stat-item">
+          <div class="stat-card">
             <span class="stat-number">50+</span>
             <span class="stat-label">Variedades de Café</span>
           </div>
-          <div class="stat-item">
+          <div class="stat-card">
             <span class="stat-number">5</span>
             <span class="stat-label">Anos de Experiência</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specialties Menu Section -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tagline">Cardápio Exclusivo</span>
+          <h2 class="section-title">Especialidades da Casa</h2>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="menu-filters reveal">
+          <button class="filter-btn active" data-category="all">Todos</button>
+          <button class="filter-btn" data-category="cafes">Cafés</button>
+          <button class="filter-btn" data-category="geladas">Bebidas Geladas</button>
+          <button class="filter-btn" data-category="acompanhamentos">Acompanhamentos</button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-grid reveal">
+          <!-- Item 1 -->
+          <div class="menu-item" data-category="cafes">
+            <div class="menu-item-header">
+              <h3 class="menu-item-title">Espresso Gold</h3>
+              <span class="menu-item-price">R$ 18,00</span>
+            </div>
+            <div class="menu-item-body">
+              <p>Espresso extraído com grãos selecionados do sul de Minas Gerais, finalizado com raspas de ouro comestível 24k.</p>
+            </div>
+            <div class="menu-item-footer">
+              <svg class="menu-item-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              </svg>
+              <span>Grãos Especiais • 60ml</span>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="menu-item" data-category="cafes">
+            <div class="menu-item-header">
+              <h3 class="menu-item-title">Cappuccino Trufado</h3>
+              <span class="menu-item-price">R$ 14,00</span>
+            </div>
+            <div class="menu-item-body">
+              <p>Cappuccino clássico italiano cremoso com calda espessa de trufa de chocolate belga artesanal nas bordas da xícara.</p>
+            </div>
+            <div class="menu-item-footer">
+              <svg class="menu-item-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              </svg>
+              <span>Contém Lactose • 150ml</span>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="menu-item" data-category="geladas">
+            <div class="menu-item-header">
+              <h3 class="menu-item-title">Cold Brew Citrus</h3>
+              <span class="menu-item-price">R$ 16,00</span>
+            </div>
+            <div class="menu-item-body">
+              <p>Café extraído a frio por 18 horas, proporcionando baixa acidez, infusionado com rodelas de laranja bahia e tônica artesanal.</p>
+            </div>
+            <div class="menu-item-footer">
+              <i data-lucide="droplets" class="menu-item-icon"></i>
+              <span>Servido com Gelo • 300ml</span>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="menu-item" data-category="geladas">
+            <div class="menu-item-header">
+              <h3 class="menu-item-title">Affogato Dourado</h3>
+              <span class="menu-item-price">R$ 15,00</span>
+            </div>
+            <div class="menu-item-body">
+              <p>Gelato cremoso de baunilha artesanal afogado em uma dose quente de espresso duplo com calda brilhante de caramelo salgado.</p>
+            </div>
+            <div class="menu-item-footer">
+              <i data-lucide="ice-cream" class="menu-item-icon"></i>
+              <span>Sobremesa • 180ml</span>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="menu-item" data-category="acompanhamentos">
+            <div class="menu-item-header">
+              <h3 class="menu-item-title">Croissant de Amêndoas</h3>
+              <span class="menu-item-price">R$ 16,00</span>
+            </div>
+            <div class="menu-item-body">
+              <p>Croissant folhado clássico francês, assado na hora, recheado com creme de amêndoas suave e salpicado com amêndoas laminadas tostadas.</p>
+            </div>
+            <div class="menu-item-footer">
+              <i data-lucide="cookie" class="menu-item-icon"></i>
+              <span>Contém Glúten • Assado na Hora</span>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="menu-item" data-category="acompanhamentos">
+            <div class="menu-item-header">
+              <h3 class="menu-item-title">Toast Parma & Figo</h3>
+              <span class="menu-item-price">R$ 22,00</span>
+            </div>
+            <div class="menu-item-body">
+              <p>Fatia espessa de sourdough grelhada, queijo de cabra artesanal cremoso, presunto de parma, figos frescos grelhados e fio de mel silvestre.</p>
+            </div>
+            <div class="menu-item-footer">
+              <i data-lucide="sandwich" class="menu-item-icon"></i>
+              <span>Sourdough de Fermentação Natural</span>
+            </div>
           </div>
         </div>
       </div>
@@ -98,29 +224,61 @@
     <!-- Location Section -->
     <section id="location" class="location">
       <div class="container">
-        <h2>Localização</h2>
-        <div class="location-content">
-          <div class="map-container">
+        <div class="section-header reveal">
+          <span class="section-tagline">Visite-nos</span>
+          <h2 class="section-title">Onde Estamos</h2>
+        </div>
+
+        <div class="location-grid">
+          <div class="map-wrapper reveal">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127394.47751651339!2d-38.60201776770214!3d-3.79331068839782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74c3f464c783f%3A0x4661c60a0c6b37ca!2sFortaleza%20-%20CE!5e0!3m2!1spt-BR!2sbr!4v1748436523323!5m2!1spt-BR!2sbr"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-            >
-            </iframe>
+            ></iframe>
           </div>
-          <div class="location-info">
+
+          <div class="location-card reveal">
             <h3>Venha nos visitar</h3>
-            <p><strong>Endereço:</strong></p>
-            <p>Av. Fortal City, 123</p>
-            <p>Aldeota, Fortaleza - CE</p>
-            <br />
-            <p><strong>Horário de Funcionamento:</strong></p>
-            <p>Segunda a Sexta: 7h às 22h</p>
-            <p>Sábado e Domingo: 8h às 23h</p>
-            <br />
-            <p><strong>Telefone:</strong></p>
-            <p>(85) 3000-0000</p>
+            
+            <div class="info-list">
+              <div class="info-detail">
+                <div class="info-icon">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Endereço</h4>
+                  <p>Av. Fortal City, 123</p>
+                  <p>Aldeota, Fortaleza - CE</p>
+                </div>
+              </div>
+
+              <div class="info-detail">
+                <div class="info-icon">
+                  <i data-lucide="clock"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Funcionamento</h4>
+                  <p>Segunda a Sexta: 7h às 22h</p>
+                  <p>Sábado e Domingo: 8h às 12h</p>
+                </div>
+              </div>
+
+              <div class="info-detail">
+                <div class="info-icon">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Contato</h4>
+                  <p>(85) 3000-0000</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="https://maps.google.com" target="_blank" class="btn btn-primary location-btn">
+              <i data-lucide="navigation"></i> Como Chegar
+            </a>
           </div>
         </div>
       </div>
@@ -129,46 +287,119 @@
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials">
       <div class="container">
-        <h2>Depoimentos</h2>
+        <div class="section-header reveal">
+          <span class="section-tagline">Opinião de Quem Ama</span>
+          <h2 class="section-title">Depoimentos</h2>
+        </div>
+
         <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">M</div>
-            <div class="testimonial-name">Maria Santos</div>
-            <div class="testimonial-text">
-              "O Café Dourado é o meu lugar preferido para relaxar. O ambiente é
-              acolhedor e o café, simplesmente perfeito!"
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card reveal">
+            <span class="quote-icon">“</span>
+            <div class="rating">
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+            </div>
+            <p class="testimonial-text">
+              "O Café Dourado é o meu lugar preferido para relaxar. O ambiente é acolhedor, o atendimento é impecável e o café Espresso Gold é simplesmente extraordinário!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">M</div>
+              <div class="author-info">
+                <h4>Maria Santos</h4>
+                <span>Coffee Enthusiast</span>
+              </div>
             </div>
           </div>
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">J</div>
-            <div class="testimonial-name">João Silva</div>
-            <div class="testimonial-text">
-              "Atendimento impecável e qualidade incomparável. Recomendo para
-              todos os amantes de café!"
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card reveal">
+            <span class="quote-icon">“</span>
+            <div class="rating">
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Atendimento espetacular e grãos de altíssima qualidade. O cappuccino trufado é imperdível, recomendo para todos os reais amantes de café!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">J</div>
+              <div class="author-info">
+                <h4>João Silva</h4>
+                <span>Sommelier de Café</span>
+              </div>
             </div>
           </div>
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">C</div>
-            <div class="testimonial-name">Carla Lima</div>
-            <div class="testimonial-text">
-              "Os doces são maravilhosos e o capuccino é o melhor da cidade.
-              Sempre volto com prazer!"
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card reveal">
+            <span class="quote-icon">“</span>
+            <div class="rating">
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Os doces são incríveis e o Cold Brew Citrus é incrivelmente fresco. O Café Dourado virou parada obrigatória todos os finais de semana."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">C</div>
+              <div class="author-info">
+                <h4>Carla Lima</h4>
+                <span>Food Designer</span>
+              </div>
             </div>
           </div>
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">R</div>
-            <div class="testimonial-name">Roberto Costa</div>
-            <div class="testimonial-text">
-              "Excelente custo-benefício e um clima que faz a gente querer
-              passar horas por lá. Sensacional!"
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card reveal">
+            <span class="quote-icon">“</span>
+            <div class="rating">
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Excelente custo-benefício e um clima de tranquilidade perfeito para coworking. A internet é ótima e os cafés te dão energia o dia todo."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">R</div>
+              <div class="author-info">
+                <h4>Roberto Costa</h4>
+                <span>Programador</span>
+              </div>
             </div>
           </div>
-          <div class="testimonial-card">
-            <div class="testimonial-avatar">A</div>
-            <div class="testimonial-name">Ana Ferreira</div>
-            <div class="testimonial-text">
-              "Ambiente super aconchegante e o café é maravilhoso! Meu local
-              favorito para trabalhar."
+
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card reveal">
+            <span class="quote-icon">“</span>
+            <div class="rating">
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+              <i data-lucide="star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Ambiente decorado com muito bom gosto, iluminação perfeita e os garçons são super simpáticos. O croissant de amêndoas derrete na boca!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div class="author-info">
+                <h4>Ana Ferreira</h4>
+                <span>Arquiteta</span>
+              </div>
             </div>
           </div>
         </div>
@@ -178,42 +409,58 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Entre em Contato</h2>
-        <div class="contact-content">
-          <div class="contact-form">
-            <form id="contactForm">
-              <div class="form-group">
-                <input type="text" placeholder="Seu Nome" required />
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-header">
+              <span class="section-tagline">Fale Conosco</span>
+              <h3>Bata um papo com a gente</h3>
+              <p>Dúvidas, eventos, parcerias ou reservas? Preencha o formulário ao lado e nossa equipe entrará em contato em menos de 24 horas.</p>
+            </div>
+            
+            <div class="info-list">
+              <div class="info-detail">
+                <div class="info-icon">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="info-text">
+                  <h4>E-mail Oficial</h4>
+                  <p>contato@cafedourado.com.br</p>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="email" placeholder="Seu Email" required />
+
+              <div class="info-detail">
+                <div class="info-icon">
+                  <i data-lucide="message-square"></i>
+                </div>
+                <div class="info-text">
+                  <h4>Whatsapp Reservas</h4>
+                  <p>(85) 99999-0000</p>
+                </div>
               </div>
-              <div class="form-group">
-                <textarea placeholder="Sua Mensagem" required></textarea>
-              </div>
-              <button type="submit" class="submit-btn">Enviar Mensagem</button>
-            </form>
+            </div>
           </div>
-          <div class="contact-info">
-            <h3>Informações de Contato</h3>
-            <div class="contact-item">
-              <strong>📍 Endereço</strong><br />
-              Av. Fortal City, 123<br />
-              Aldeota, Fortaleza - CE
-            </div>
-            <div class="contact-item">
-              <strong>📞 Telefone</strong><br />
-              (85) 3000-0000
-            </div>
-            <div class="contact-item">
-              <strong>📧 Email</strong><br />
-              contato@cafedourado.com.br
-            </div>
-            <div class="contact-item">
-              <strong>🕒 Horário</strong><br />
-              Seg-Sex: 7h às 22h<br />
-              Sáb-Dom: 8h às 23h
-            </div>
+
+          <div class="contact-card reveal">
+            <h3>Enviar Mensagem</h3>
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Seu Nome</label>
+                  <input type="text" id="name" placeholder="Ex: Maria Santos" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Seu E-mail</label>
+                  <input type="email" id="email" placeholder="Ex: email@exemplo.com" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" placeholder="Como podemos te ajudar hoje?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary submit-btn">
+                Enviar Mensagem <i data-lucide="send"></i>
+              </button>
+            </form>
           </div>
         </div>
       </div>
@@ -222,10 +469,59 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2025 Café Dourado. Todos os direitos reservados.</p>
-        <p>Desenvolvido por Leonardo de Souza Rodrigues</p>
+        <div class="footer-content">
+          <a href="#home" class="footer-logo">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+              <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+              <path d="M6 1v3"/>
+              <path d="M10 1v3"/>
+              <path d="M14 1v3"/>
+            </svg>
+            Café Dourado
+          </a>
+          
+          <ul class="footer-nav">
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#menu">Cardápio</a></li>
+            <li><a href="#location">Localização</a></li>
+            <li><a href="#testimonials">Depoimentos</a></li>
+            <li><a href="#contact">Contato</a></li>
+          </ul>
+
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+              <i data-lucide="instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+              <i data-lucide="facebook"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon">
+              <i data-lucide="twitter"></i>
+            </a>
+          </div>
+
+          <div class="copyright">
+            <p>&copy; 2026 Café Dourado. Todos os direitos reservados.</p>
+            <p>Desenvolvido por Leonardo de Souza Rodrigues</p>
+          </div>
+        </div>
       </div>
     </footer>
-    <script src="./scripts.js"></script>
+
+    <!-- Form Success Modal -->
+    <div class="success-modal" id="successModal">
+      <div class="success-modal-content">
+        <div class="success-icon-box">
+          <i data-lucide="check"></i>
+        </div>
+        <h3>Mensagem Enviada!</h3>
+        <p>Agradecemos seu contato. Nossa equipe responderá sua mensagem por e-mail ou WhatsApp o mais rápido possível.</p>
+        <button class="btn btn-primary" onclick="closeSuccessModal()">Fechar</button>
+      </div>
+    </div>
+
+    <!-- Script file link -->
+    <script src="scripts.js?v=2"></script>
   </body>
 </html>
